@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get form values
             const name = document.getElementById('name').value;
             const emailValue = document.getElementById('email').value;
+            const whatsappNumber = document.getElementById('whatsapp').value;
             const subject = document.getElementById('subject').value;
             const messageValue = document.getElementById('message').value;
             
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify({
                     name: name,
                     email: emailValue,
+                    whatsapp: whatsappNumber, // Added WhatsApp number to email
                     subject: subject,
                     message: messageValue,
                     _subject: `New Portfolio Inquiry: ${name}`,
@@ -125,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const telegramMsg = `<b>🚀 New Contact Inquiry</b>\n\n` +
                                 `<b>Name:</b> ${name}\n` +
                                 `<b>Email:</b> ${emailValue}\n` +
+                                `<b>WhatsApp:</b> ${whatsappNumber}\n` + // Added WhatsApp to Telegram
                                 `<b>Subject:</b> ${subject}\n\n` +
                                 `<b>Message:</b>\n${messageValue}`;
             
